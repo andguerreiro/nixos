@@ -48,11 +48,6 @@ Delete older generations
 sudo nix-collect-garbage --delete-older-than 30d
 ```
 
-Search packages
-```
-nix search nixpkgs <package>
-```
-
 Temporary install packages
 ```
 nix-shell -p <package>
