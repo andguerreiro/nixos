@@ -40,7 +40,7 @@ sudo nixos-rebuild switch --upgrade
 
 List generations
 ```
-sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+sudo nixos-rebuild list-generations
 ```
 
 Delete older generations
