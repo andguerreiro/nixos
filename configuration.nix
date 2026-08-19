@@ -81,6 +81,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Install flatpak
+  services.flatpak.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
