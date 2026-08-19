@@ -8,28 +8,58 @@ git commit -m "Update NixOS configuration"
 git push
 ```
 
-Clear
-```
-sudo nix-collect-garbage -d
-sudo nix-store --optimise
-```
-
-Usefull
+Edit
 ```
 sudo nano /etc/nixos/configuration.nix
 ```
+
+Rebuild and test
+```
+sudo nixos-rebuild test
+```
+
+Rebuild and switch
 ```
 sudo nixos-rebuild switch
 ```
+
+Rebuild and boot
 ```
 sudo nixos-rebuild boot
 ```
+
+Rollback
+```
+sudo nixos-rebuild switch --rollback
+```
+
+Rebuild and upgrade
 ```
 sudo nixos-rebuild switch --upgrade
 ```
+
+List generations
 ```
 sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
 ```
+
+Delete older generations
+```
+sudo nix-collect-garbage --delete-older-than 30d
+```
+
+Search packages
+```
+nix search nixpkgs <package>
+```
+
+Temporary install packages
 ```
 nix-shell -p <package>
+```
+
+Aggressive cleanup
+```
+sudo nix-collect-garbage -d
+sudo nix-store --optimise
 ```
