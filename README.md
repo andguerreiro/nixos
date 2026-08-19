@@ -1,9 +1,9 @@
 Back-up
 ```
-cp /etc/nixos/configuration.nix ~/nixos/
 cd ~/nixos
 git pull --rebase
-git add .
+cp /etc/nixos/configuration.nix ~/nixos/
+git add configuration.nix
 git commit -m "Update NixOS configuration"
 git push
 ```
